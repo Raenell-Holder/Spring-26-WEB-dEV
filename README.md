@@ -1,6 +1,4 @@
 # Spring-26-WEB-dev
-# Spring-26-WEB-DEV
-
 ---
 
 ## 1
@@ -21,8 +19,7 @@
    `<a href="http://cnn.com>"News</a>`  
    `<a href="http://cnn.com">News</a>`
 
-6. Fix the syntax error in this CSS code:  
-   `p { font-size = 10rem }`  
+6. Fix the syntax error in this CSS code:  `p { font-size = 10rem }`  
    `p { font-size: 10rem }`
 
 7. Show at least two different ways to specify bright red in CSS code.  
@@ -198,14 +195,25 @@ charset, id, href, class, alt, src
 
 Write the CSS code to make the Webpage Title text red.
 
-#top { color: red }
+#id { color: red }
 
 Write the CSS code to make all paragraphs in the intro section italic.
 
 section.intro p { font-style: italic }
 
-Explain why it is difficult to style the Author Name.
-The <h3> element appears in multiple places. Adding an id would make it easier to target.
+Explain why it is difficult to use linked or
+embedded CSS to change the style of the Author
+Name. How you could modify the HTML to make
+it easier to style the author name no matter
+where it is or no matter how the document is
+structured?
+The h3 element appears in different places.
+We could add an id to select it no matter
+how the document is structured.
+Assuming the author name always in the first h3
+in the article, we could select it using:
+article li:nth-child(1)
+
 
 6
 
@@ -252,7 +260,7 @@ Another reason for external CSS:
 Avoid redundancy and centralize styling.
 
 7
-
+Consider this URL: http://pm4.breimer.net/project2/admin.php?status=active
 The URL is:
 Absolute
 
@@ -294,7 +302,6 @@ Block/inline display:
 display
 
 Text shadow:
-text-shadow
 
 8
 
@@ -311,6 +318,11 @@ document.querySelector("#Blue")
   .addEventListener("click", changeToBlue);
 
 Generate list:
+<ol>
+<li>Friendship</li>
+<li>Love</li>
+<li>Caring</li>
+</ol>
 
 function makeList(arrayOfValues, type) {
   var newList = document.createElement(type);
@@ -321,41 +333,45 @@ function makeList(arrayOfValues, type) {
   }
   return newList;
 }
+
+
 9
 
-Radio button generator:
+Write a JavaScript function called makeBinaryChoice to create a pair of radios buttons with labels. The
+function should take four parameters: a label, a name and two values.
+makeBinaryChoice("Color: ", "color", "Black", "Blue") would return the following HTML.
+<div>
+<label>Color: </label>
+<label for="Black">Black</label>
+<input value="Black" name="color" id="Black" type="radio">
+<label for="Blue">Blue</label>
+<input value="Blue" name="color" id="Blue" type="radio">
+</div>
 
 function makeBinaryChoice(label, name, value1, value2) {
-  var newDiv = document.createElement("div");
-
-  var newLabel = document.createElement("label");
-  newLabel.appendChild(document.createTextNode(label));
-
-  var label1 = document.createElement("label");
-  label1.setAttribute("for", value1);
-  label1.appendChild(document.createTextNode(value1));
-
-  var radio1 = document.createElement("input");
-  radio1.setAttribute("value", value1);
-  radio1.setAttribute("name", name);
-  radio1.setAttribute("id", value1);
-  radio1.setAttribute("type", "radio");
-
-  var label2 = document.createElement("label");
-  label2.setAttribute("for", value2);
-  label2.appendChild(document.createTextNode(value2));
-
-  var radio2 = document.createElement("input");
-  radio2.setAttribute("value", value2);
-  radio2.setAttribute("name", name);
-  radio2.setAttribute("id", value2);
-  radio2.setAttribute("type", "radio");
-
-  newDiv.appendChild(newLabel);
-  newDiv.appendChild(label1);
-  newDiv.appendChild(radio1);
-  newDiv.appendChild(label2);
-  newDiv.appendChild(radio2);
-
-  return newDiv;
+var newDiv = document.createElement("div");
+var newLabel = document.createElement("label");
+newLabel.appendChild(document.createTextNode(label));
+var label1 = document.createElement("label");
+label1.setAttribute("for", value1);
+label1.appendChild(document.createTextNode(value1));
+var radio1 = document.createElement("input");
+radio1.setAttribute("value", value1);
+radio1.setAttribute("name", name);
+radio1.setAttribute("id", value1);
+radio1.setAttribute("type", "radio");
+var label2 = document.createElement("label");
+label2.setAttribute("for", value2);
+label2.appendChild(document.createTextNode(value2));
+var radio2 = document.createElement("input");
+radio2.setAttribute("value", value2);
+radio2.setAttribute("name", name);
+radio2.setAttribute("id", value2);
+radio2.setAttribute("type", "radio");
+newDiv.appendChild(newLabel);
+newDiv.appendChild(label1);
+newDiv.appendChild(radio1);
+newDiv.appendChild(label2);
+newDiv.appendChild(radio2);
+return newDiv;
 }
