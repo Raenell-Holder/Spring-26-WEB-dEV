@@ -1,7 +1,5 @@
-# Spring-26-WEB-dev
----
 
-## 1
+---
 
 1. What HTML element indicates the most important header text in the body of a web page?  
    `<h1>`
