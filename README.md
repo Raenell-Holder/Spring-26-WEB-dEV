@@ -1,20 +1,20 @@
 # Spring-26-WEB-dEV
 
-# 1
-# 1. What HTML element indicates the most important header text in the body of a web page?
-#<h1>
-# 2. What HTML elements make text italic by default on most web browsers? List two different tags.
-# <em> <i> <var>
-#3. What HTML elements indicate computer code? List two different tags.
-#<var> <code> <samp>
-#4. What HTML element allows you to embed CSS?
-#<style>
-#5. Fix this HTML code so it will validate: <a href="http://cnn.com>"News</a>
-#<a href="http://cnn.com">News</a>
-#6. Fix the syntax error in this CSS code: p { font-size = 10rem }
-#p { font-size: 10rem }
-#7. Show at least two different ways to specify bright red in CSS code.
-# #FF0000 rgb(255,0,0) rgba(255,0,0,1.0)
+ 1
+ 1. What HTML element indicates the most important header text in the body of a web page?
+<h1>
+ 2. What HTML elements make text italic by default on most web browsers? List two different tags.
+ <em> <i> <var>
+3. What HTML elements indicate computer code? List two different tags.
+<var> <code> <samp>
+4. What HTML element allows you to embed CSS?
+ <style>
+5. Fix this HTML code so it will validate: <a href="http://cnn.com>"News</a>
+<a href="http://cnn.com">News</a>
+6. Fix the syntax error in this CSS code: p { font-size = 10rem }
+p { font-size: 10rem }
+7. Show at least two different ways to specify bright red in CSS code.
+ #FF0000 rgb(255,0,0) rgba(255,0,0,1.0)
 8. Which language defines the structural layer of a web page? Write the full name
 HyperText Markup Language
 9. Which language defines the presentational layer of a web page? Write the full name
